@@ -13,6 +13,7 @@
 		F13650D82B98AE5B0049036E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13650D62B98AE5B0049036E /* Main.storyboard */; };
 		F13650DA2B98AE5C0049036E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13650D92B98AE5C0049036E /* Assets.xcassets */; };
 		F13650DD2B98AE5C0049036E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13650DB2B98AE5C0049036E /* LaunchScreen.storyboard */; };
+		F13650E62B98B08C0049036E /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13650E52B98B08C0049036E /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F13650D92B98AE5C0049036E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F13650DC2B98AE5C0049036E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F13650DE2B98AE5C0049036E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F13650E52B98B08C0049036E /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		F13650CF2B98AE5B0049036E /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				F13650D02B98AE5B0049036E /* AppDelegate.swift */,
-				F13650D22B98AE5B0049036E /* SceneDelegate.swift */,
-				F13650D42B98AE5B0049036E /* ViewController.swift */,
-				F13650D62B98AE5B0049036E /* Main.storyboard */,
+				F13650E42B98AE850049036E /* Services */,
+				F13650EB2B98B17F0049036E /* Models */,
+				F13650E82B98B0CF0049036E /* ViewConrollers */,
+				F13650EA2B98B10E0049036E /* StoryBoards */,
+				F13650E72B98B0BA0049036E /* App */,
 				F13650D92B98AE5C0049036E /* Assets.xcassets */,
-				F13650DB2B98AE5C0049036E /* LaunchScreen.storyboard */,
 				F13650DE2B98AE5C0049036E /* Info.plist */,
 			);
 			path = Weather;
+			sourceTree = "<group>";
+		};
+		F13650E42B98AE850049036E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F13650E52B98B08C0049036E /* DataStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F13650E72B98B0BA0049036E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F13650D02B98AE5B0049036E /* AppDelegate.swift */,
+				F13650D22B98AE5B0049036E /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F13650E82B98B0CF0049036E /* ViewConrollers */ = {
+			isa = PBXGroup;
+			children = (
+				F13650D42B98AE5B0049036E /* ViewController.swift */,
+			);
+			path = ViewConrollers;
+			sourceTree = "<group>";
+		};
+		F13650EA2B98B10E0049036E /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				F13650D62B98AE5B0049036E /* Main.storyboard */,
+				F13650DB2B98AE5C0049036E /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		F13650EB2B98B17F0049036E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F13650D52B98AE5B0049036E /* ViewController.swift in Sources */,
+				F13650E62B98B08C0049036E /* DataStore.swift in Sources */,
 				F13650D12B98AE5B0049036E /* AppDelegate.swift in Sources */,
 				F13650D32B98AE5B0049036E /* SceneDelegate.swift in Sources */,
 			);
@@ -297,8 +341,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,9 +350,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = artur.Weather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -324,8 +372,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,9 +381,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = artur.Weather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
