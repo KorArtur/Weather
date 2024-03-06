@@ -14,6 +14,7 @@
 		F13650DA2B98AE5C0049036E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13650D92B98AE5C0049036E /* Assets.xcassets */; };
 		F13650DD2B98AE5C0049036E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13650DB2B98AE5C0049036E /* LaunchScreen.storyboard */; };
 		F13650E62B98B08C0049036E /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13650E52B98B08C0049036E /* DataStore.swift */; };
+		F13650EE2B98F12E0049036E /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13650ED2B98F12E0049036E /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F13650DC2B98AE5C0049036E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F13650DE2B98AE5C0049036E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F13650E52B98B08C0049036E /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		F13650ED2B98F12E0049036E /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,8 @@
 		F13650CF2B98AE5B0049036E /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				F13650E42B98AE850049036E /* Services */,
 				F13650EB2B98B17F0049036E /* Models */,
+				F13650E42B98AE850049036E /* Services */,
 				F13650E82B98B0CF0049036E /* ViewConrollers */,
 				F13650EA2B98B10E0049036E /* StoryBoards */,
 				F13650E72B98B0BA0049036E /* App */,
@@ -106,6 +108,7 @@
 		F13650EB2B98B17F0049036E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F13650ED2B98F12E0049036E /* Weather.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				F13650E62B98B08C0049036E /* DataStore.swift in Sources */,
 				F13650D12B98AE5B0049036E /* AppDelegate.swift in Sources */,
 				F13650D32B98AE5B0049036E /* SceneDelegate.swift in Sources */,
+				F13650EE2B98F12E0049036E /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
