@@ -20,8 +20,14 @@ final class WeatherCitiesViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cityCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cityCell", for: indexPath) as? WeatherCityCell else {
+            return UITableViewCell()
+        }
         
+        let city = cities[indexPath.row]
+        let firstDayWeather = city.weathers.first?.weatherByHours.first?.weather ??
+        Weather(description: "", temperature: 0, highLowTemperature: HighLowTemperature(high: 0, low: 0), type: .sunny)
+        cell.configure(with: firstDayWeather, cityName: city)
         
         return cell
     }

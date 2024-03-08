@@ -7,7 +7,8 @@
 
 import UIKit
 
-class WeatherCityCell: UITableViewCell {
+final class WeatherCityCell: UITableViewCell {
+    @IBOutlet var contentView: UIView!
     
     @IBOutlet private var cityLabel: UILabel!
     @IBOutlet private var conditionLabel: UILabel!
