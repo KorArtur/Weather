@@ -10,9 +10,9 @@ import Foundation
 final class DataStore {
     static let shared = DataStore()
     
-    let cities = ["Москва", "Архангельск", "Воронеж", "Новочеркасск"]
-    let lowTemperatures = -25...10
-    let highTemperatures = -15...40
+    let cities = ["Москва", "Архангельск", "Воронеж", "Новочеркасск", "Ростов на Дону", "Уфа"]
+    let lowTemperatures = -5...10
+    let highTemperatures = -2...7
     let hours = 0...23
     
     private init() {}

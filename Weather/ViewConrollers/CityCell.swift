@@ -8,20 +8,29 @@
 import UIKit
 
 final class WeatherCityCell: UITableViewCell {
-    @IBOutlet var contentView: UIView!
-    
+
     @IBOutlet private var cityLabel: UILabel!
     @IBOutlet private var conditionLabel: UILabel!
     @IBOutlet private var temperatureLabel: UILabel!
     @IBOutlet private var maxTempLabel: UILabel!
     @IBOutlet private var minTempLabel: UILabel!
     
-    func configure(with weather: Weather, cityName: City ) {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentView.backgroundColor = .gray
+        contentView.layer.cornerRadius = 10
         
-        cityLabel.text = cityName.title
+        let margins = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
+              contentView.frame = contentView.frame.inset(by: margins)
+    }
+    
+    func configure(with weather: Weather?, cityName: String) {
+        guard let weather else { return }
+        
+        cityLabel.text = cityName
         conditionLabel.text = weather.type.rawValue
-        temperatureLabel.text = "\(String(describing: weather.temperature))°C"
-        maxTempLabel.text = "\(String(describing: weather.highLowTemperature.high))°C"
-        minTempLabel.text = "\(String(describing: weather.highLowTemperature.low))°C"
+        temperatureLabel.text = "\(weather.temperature)°C"
+        maxTempLabel.text = "\(weather.highLowTemperature.high)°C"
+        minTempLabel.text = "\(weather.highLowTemperature.low)°C"
     }
 }

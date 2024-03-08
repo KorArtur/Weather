@@ -13,6 +13,7 @@ final class WeatherCitiesViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.separatorStyle = .none
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -25,11 +26,18 @@ final class WeatherCitiesViewController: UITableViewController {
         }
         
         let city = cities[indexPath.row]
-        let firstDayWeather = city.weathers.first?.weatherByHours.first?.weather ??
-        Weather(description: "", temperature: 0, highLowTemperature: HighLowTemperature(high: 0, low: 0), type: .sunny)
-        cell.configure(with: firstDayWeather, cityName: city)
+        let firstDayWeather = city.weathers.first?.weatherByHours.first?.weather
+        cell.configure(with: firstDayWeather, cityName: city.title)
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let city = cities[indexPath.row]
+        let VC = UIViewController()
+//        VC.city = city
+        VC.view.backgroundColor = .white
+        navigationController?.pushViewController(VC, animated: true)
     }
 }
 
