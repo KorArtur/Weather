@@ -78,7 +78,6 @@ struct HighLowTemperature {
     let low: Double
 }
 
-
 enum Days: String, CaseIterable {
     case sunday = "Вс"
     case monday = "Пн"
