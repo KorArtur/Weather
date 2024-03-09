@@ -31,10 +31,9 @@ final class CurrentWeatherViewController: UIViewController {
         cityLabel.text = city.title
         temperatureLabel.text = "\(city.weathers[0].weatherByHours[0].weather.temperature)°C  \(city.weathers[0].weatherByHours[0].weather.type.rawValue)"
         
-        color()
+        getColor()
         
         weekLabel.text = "Погода на семь дней:"
-        
         mondayLabel.text = generateWeatherText(for: 1, hourIndex: 1)
         tuesdayLabel.text = generateWeatherText(for: 2, hourIndex: 2)
         wednesdayLabel.text = generateWeatherText(for: 3, hourIndex: 3)
@@ -44,7 +43,7 @@ final class CurrentWeatherViewController: UIViewController {
         sundayLabel.text = generateWeatherText(for: 0, hourIndex: 0)
         
     }
-    func color(){
+    private func getColor(){
         
         switch city.weathers[0].weatherByHours[0].weather.type {
         case .sunny:
@@ -58,7 +57,7 @@ final class CurrentWeatherViewController: UIViewController {
             
         }
     }
-    func generateWeatherText(for weatherIndex: Int, hourIndex: Int) -> String {
+   private func generateWeatherText(for weatherIndex: Int, hourIndex: Int) -> String {
         let weatherData = city.weathers[weatherIndex]
         
         let day = weatherData.day.rawValue
