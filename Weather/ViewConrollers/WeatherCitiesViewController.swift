@@ -45,9 +45,15 @@ final class WeatherCitiesViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let city = cities[indexPath.row]
-        let currentWeatherVC = CurrentWeatherViewController()
-            currentWeatherVC.cities = cities
-        currentWeatherVC.view.backgroundColor = .white
+        
+            let currentWeatherVC = UIStoryboard(
+            name: "SecondStoryBoard",
+            bundle: .main
+            ).instantiateViewController(
+                withIdentifier: "CurrentWeatherViewController"
+            ) as? CurrentWeatherViewController
+        currentWeatherVC?.cities = cities
+        guard let currentWeatherVC else { return }
         navigationController?.pushViewController(currentWeatherVC, animated: true)
     }
 }
