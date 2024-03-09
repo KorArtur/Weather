@@ -34,7 +34,6 @@
 		F13650DE2B98AE5C0049036E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F13650E52B98B08C0049036E /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		F13650ED2B98F12E0049036E /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
-		F13650EF2B9A18CF0049036E /* SecondStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondStoryboard.storyboard; sourceTree = "<group>"; };
 		F13650F12B9A1A990049036E /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,7 +184,6 @@
 			files = (
 				F13650DD2B98AE5C0049036E /* LaunchScreen.storyboard in Resources */,
 				F13650DA2B98AE5C0049036E /* Assets.xcassets in Resources */,
-				F13650D82B98AE5B0049036E /* Main.storyboard in Resources */,
 				3A4F3A712B9A210C000624FB /* SecondStoryBoard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,14 +208,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F13650D62B98AE5B0049036E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F13650D72B98AE5B0049036E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F13650DB2B98AE5C0049036E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
