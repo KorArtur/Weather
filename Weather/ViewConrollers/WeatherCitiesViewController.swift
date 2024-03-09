@@ -13,24 +13,43 @@ final class WeatherCitiesViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.separatorStyle = .none
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
         cities.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cityCell", for: indexPath) as? WeatherCityCell else {
+    override func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: "cityCell",
+            for: indexPath
+        ) as? WeatherCityCell else {
+            
             return UITableViewCell()
         }
         
         let city = cities[indexPath.row]
-        let firstDayWeather = city.weathers.first?.weatherByHours.first?.weather ??
-        Weather(description: "", temperature: 0, highLowTemperature: HighLowTemperature(high: 0, low: 0), type: .sunny)
-        cell.configure(with: firstDayWeather, cityName: city)
+        let firstDayWeather = city.weathers.first?.weatherByHours.first?.weather
+        cell.configure(with: firstDayWeather, cityName: city.title)
         
         return cell
     }
+    
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let city = cities[indexPath.row]
+//        let currentWeatherVC = CurrentWeatherViewController()
+//            currentWeatherVC.city = city
+//        currentWeatherVC.view.backgroundColor = .white
+//        navigationController?.pushViewController(currentWeatherVC, animated: true)
+//    }
 }
 
 
