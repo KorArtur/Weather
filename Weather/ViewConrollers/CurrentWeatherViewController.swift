@@ -44,7 +44,6 @@ final class CurrentWeatherViewController: UIViewController {
         
     }
     private func getColor(){
-        
         switch city.weathers[0].weatherByHours[0].weather.type {
         case .sunny:
             view.backgroundColor = .systemYellow
@@ -54,12 +53,10 @@ final class CurrentWeatherViewController: UIViewController {
             view.backgroundColor = .systemCyan
         case .windy:
             view.backgroundColor = .systemGray4
-            
         }
     }
    private func generateWeatherText(for weatherIndex: Int, hourIndex: Int) -> String {
         let weatherData = city.weathers[weatherIndex]
-        
         let day = weatherData.day.rawValue
         let type = weatherData.weatherByHours[hourIndex].weather.type.rawValue
         let lowTemperature = weatherData.weatherByHours[hourIndex].weather.highLowTemperature.low
