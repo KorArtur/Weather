@@ -22,7 +22,7 @@ final class CurrentWeatherViewController: UIViewController {
     @IBOutlet var saturdayLabel: UILabel!
     @IBOutlet var sundayLabel: UILabel!
     
-    var cities: [City]!
+    var city: City!
     
     override func viewDidLoad() {
         super.viewDidLoad()
