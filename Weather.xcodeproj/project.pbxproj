@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A4F3A712B9A210C000624FB /* SecondStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4F3A702B9A210C000624FB /* SecondStoryBoard.storyboard */; };
+		3A4F3A712B9A210C000624FB /* CurrentWeather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4F3A702B9A210C000624FB /* CurrentWeather.storyboard */; };
 		3A4F3A732B9A2194000624FB /* CurrentWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4F3A722B9A2194000624FB /* CurrentWeatherViewController.swift */; };
 		F13650D12B98AE5B0049036E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13650D02B98AE5B0049036E /* AppDelegate.swift */; };
 		F13650D32B98AE5B0049036E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13650D22B98AE5B0049036E /* SceneDelegate.swift */; };
@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A4F3A702B9A210C000624FB /* SecondStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondStoryBoard.storyboard; sourceTree = "<group>"; };
+		3A4F3A702B9A210C000624FB /* CurrentWeather.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CurrentWeather.storyboard; sourceTree = "<group>"; };
 		3A4F3A722B9A2194000624FB /* CurrentWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewController.swift; sourceTree = "<group>"; };
 		F13650CD2B98AE5B0049036E /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F13650D02B98AE5B0049036E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				F13650DB2B98AE5C0049036E /* LaunchScreen.storyboard */,
-				3A4F3A702B9A210C000624FB /* SecondStoryBoard.storyboard */,
+				3A4F3A702B9A210C000624FB /* CurrentWeather.storyboard */,
 				F1FBCF2F2B9C69D200DC056C /* Main.storyboard */,
 			);
 			path = StoryBoards;
@@ -182,7 +182,7 @@
 			files = (
 				F13650DD2B98AE5C0049036E /* LaunchScreen.storyboard in Resources */,
 				F13650DA2B98AE5C0049036E /* Assets.xcassets in Resources */,
-				3A4F3A712B9A210C000624FB /* SecondStoryBoard.storyboard in Resources */,
+				3A4F3A712B9A210C000624FB /* CurrentWeather.storyboard in Resources */,
 				F1FBCF302B9C69D200DC056C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -47,7 +47,7 @@ final class WeatherCitiesViewController: UITableViewController {
         let city = cities[indexPath.row]
         
             let currentWeatherVC = UIStoryboard(
-            name: "SecondStoryBoard",
+            name: "CurrentWeather",
             bundle: .main
             ).instantiateViewController(
                 withIdentifier: "CurrentWeatherViewController"
