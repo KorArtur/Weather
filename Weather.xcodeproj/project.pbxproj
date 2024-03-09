@@ -12,13 +12,12 @@
 		F13650D12B98AE5B0049036E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13650D02B98AE5B0049036E /* AppDelegate.swift */; };
 		F13650D32B98AE5B0049036E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13650D22B98AE5B0049036E /* SceneDelegate.swift */; };
 		F13650D52B98AE5B0049036E /* WeatherCitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13650D42B98AE5B0049036E /* WeatherCitiesViewController.swift */; };
-		F13650D82B98AE5B0049036E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13650D62B98AE5B0049036E /* Main.storyboard */; };
 		F13650DA2B98AE5C0049036E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13650D92B98AE5C0049036E /* Assets.xcassets */; };
 		F13650DD2B98AE5C0049036E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13650DB2B98AE5C0049036E /* LaunchScreen.storyboard */; };
 		F13650E62B98B08C0049036E /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13650E52B98B08C0049036E /* DataStore.swift */; };
 		F13650EE2B98F12E0049036E /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13650ED2B98F12E0049036E /* Weather.swift */; };
-		F13650F02B9A18CF0049036E /* SecondStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13650EF2B9A18CF0049036E /* SecondStoryboard.storyboard */; };
 		F13650F22B9A1A990049036E /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13650F12B9A1A990049036E /* CityCell.swift */; };
+		F1FBCF302B9C69D200DC056C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1FBCF2F2B9C69D200DC056C /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,13 +27,13 @@
 		F13650D02B98AE5B0049036E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F13650D22B98AE5B0049036E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F13650D42B98AE5B0049036E /* WeatherCitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCitiesViewController.swift; sourceTree = "<group>"; };
-		F13650D72B98AE5B0049036E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F13650D92B98AE5C0049036E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F13650DC2B98AE5C0049036E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F13650DE2B98AE5C0049036E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F13650E52B98B08C0049036E /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		F13650ED2B98F12E0049036E /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		F13650F12B9A1A990049036E /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		F1FBCF2F2B9C69D200DC056C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +107,9 @@
 		F13650EA2B98B10E0049036E /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
-				F13650D62B98AE5B0049036E /* Main.storyboard */,
-				F13650EF2B9A18CF0049036E /* SecondStoryboard.storyboard */,
 				F13650DB2B98AE5C0049036E /* LaunchScreen.storyboard */,
 				3A4F3A702B9A210C000624FB /* SecondStoryBoard.storyboard */,
+				F1FBCF2F2B9C69D200DC056C /* Main.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -185,6 +183,7 @@
 				F13650DD2B98AE5C0049036E /* LaunchScreen.storyboard in Resources */,
 				F13650DA2B98AE5C0049036E /* Assets.xcassets in Resources */,
 				3A4F3A712B9A210C000624FB /* SecondStoryBoard.storyboard in Resources */,
+				F1FBCF302B9C69D200DC056C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

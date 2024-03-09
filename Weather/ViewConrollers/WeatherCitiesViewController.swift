@@ -43,13 +43,13 @@ final class WeatherCitiesViewController: UITableViewController {
         return cell
     }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let city = cities[indexPath.row]
-//        let currentWeatherVC = CurrentWeatherViewController()
-//            currentWeatherVC.city = city
-//        currentWeatherVC.view.backgroundColor = .white
-//        navigationController?.pushViewController(currentWeatherVC, animated: true)
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let city = cities[indexPath.row]
+        let currentWeatherVC = CurrentWeatherViewController()
+            currentWeatherVC.cities = cities
+        currentWeatherVC.view.backgroundColor = .white
+        navigationController?.pushViewController(currentWeatherVC, animated: true)
+    }
 }
 
 
