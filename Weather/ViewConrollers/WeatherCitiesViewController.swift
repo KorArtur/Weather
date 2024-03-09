@@ -16,12 +16,23 @@ final class WeatherCitiesViewController: UITableViewController {
         tableView.separatorStyle = .none
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
         cities.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cityCell", for: indexPath) as? WeatherCityCell else {
+    override func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: "cityCell",
+            for: indexPath
+        ) as? WeatherCityCell else {
+            
             return UITableViewCell()
         }
         
@@ -32,13 +43,13 @@ final class WeatherCitiesViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let city = cities[indexPath.row]
-        let VC = UIViewController()
-//        VC.city = city
-        VC.view.backgroundColor = .white
-        navigationController?.pushViewController(VC, animated: true)
-    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let city = cities[indexPath.row]
+//        let currentWeatherVC = CurrentWeatherViewController()
+//            currentWeatherVC.city = city
+//        currentWeatherVC.view.backgroundColor = .white
+//        navigationController?.pushViewController(currentWeatherVC, animated: true)
+//    }
 }
 
 

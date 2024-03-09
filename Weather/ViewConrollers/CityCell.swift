@@ -8,7 +8,7 @@
 import UIKit
 
 final class WeatherCityCell: UITableViewCell {
-
+    
     @IBOutlet private var cityLabel: UILabel!
     @IBOutlet private var conditionLabel: UILabel!
     @IBOutlet private var temperatureLabel: UILabel!
@@ -17,11 +17,10 @@ final class WeatherCityCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        contentView.backgroundColor = .gray
-        contentView.layer.cornerRadius = 10
+        contentView.layer.cornerRadius = 15
         
         let margins = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
-              contentView.frame = contentView.frame.inset(by: margins)
+        contentView.frame = contentView.frame.inset(by: margins)
     }
     
     func configure(with weather: Weather?, cityName: String) {
@@ -32,5 +31,34 @@ final class WeatherCityCell: UITableViewCell {
         temperatureLabel.text = "\(weather.temperature)°C"
         maxTempLabel.text = "\(weather.highLowTemperature.high)°C"
         minTempLabel.text = "\(weather.highLowTemperature.low)°C"
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = contentView.bounds
+        
+        switch weather.type {
+        case .sunny:
+            gradientLayer.colors = [
+                UIColor.systemYellow.cgColor,
+                UIColor.systemOrange.cgColor
+            ]
+        case .cloudy:
+            gradientLayer.colors = [
+                UIColor.systemGray.cgColor,
+                UIColor.darkGray.cgColor
+            ]
+        case .rainy:
+            gradientLayer.colors = [
+                UIColor.systemBlue.cgColor,
+                UIColor.systemCyan.cgColor
+            ]
+        case .windy:
+            gradientLayer.colors = [
+                UIColor.white.cgColor,
+                UIColor.gray.cgColor
+            ]
+        }
+        
+        contentView.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
+
