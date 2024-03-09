@@ -31,7 +31,7 @@ final class CurrentWeatherViewController: UIViewController {
         cityLabel.text = city.title
         temperatureLabel.text = "\(city.weathers[0].weatherByHours[0].weather.temperature)°C  \(city.weathers[0].weatherByHours[0].weather.type.rawValue)"
         
-        getColor()
+        setBackgroundGradient()
         
         weekLabel.text = "Погода на семь дней:"
         mondayLabel.text = generateWeatherText(for: 1, hourIndex: 1)
@@ -43,18 +43,42 @@ final class CurrentWeatherViewController: UIViewController {
         sundayLabel.text = generateWeatherText(for: 0, hourIndex: 0)
         
     }
-    private func getColor(){
+    private func setBackgroundGradient(){
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        
+        gradientLayer.colors = [
+            UIColor.systemYellow.cgColor,
+            UIColor.systemOrange.cgColor]
+        
         switch city.weathers[0].weatherByHours[0].weather.type {
         case .sunny:
-            view.backgroundColor = .systemYellow
+            gradientLayer.colors = [
+                UIColor.white.cgColor,
+                UIColor.systemOrange.cgColor
+            ]
+            view.layer.insertSublayer(gradientLayer, at: 0)
         case .cloudy:
-            view.backgroundColor = .systemGray2
+            gradientLayer.colors = [
+                UIColor.white.cgColor,
+                UIColor.darkGray.cgColor
+            ]
+            view.layer.insertSublayer(gradientLayer, at: 0)
         case .rainy:
-            view.backgroundColor = .systemCyan
+            gradientLayer.colors = [
+                UIColor.white.cgColor,
+                UIColor.systemBlue.cgColor
+            ]
+            view.layer.insertSublayer(gradientLayer, at: 0)
         case .windy:
-            view.backgroundColor = .systemGray4
+            gradientLayer.colors = [
+                UIColor.white.cgColor,
+                UIColor.gray.cgColor
+            ]
+            view.layer.insertSublayer(gradientLayer, at: 0)
         }
     }
+    
    private func generateWeatherText(for weatherIndex: Int, hourIndex: Int) -> String {
         let weatherData = city.weathers[weatherIndex]
         let day = weatherData.day.rawValue
