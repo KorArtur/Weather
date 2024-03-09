@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CurrentWeatherViewController: UIViewController {
+final class CurrentWeatherViewController: UIViewController {
     
     @IBOutlet var currentRevengeLabel: UILabel!
     @IBOutlet var cityLabel: UILabel!
@@ -23,8 +23,6 @@ class CurrentWeatherViewController: UIViewController {
     @IBOutlet var sundayLabel: UILabel!
     
     var cities: [City]!
-//    let cities = City.getCities()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
