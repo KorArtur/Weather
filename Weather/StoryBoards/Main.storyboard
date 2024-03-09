@@ -106,9 +106,7 @@
                             <outlet property="delegate" destination="3e9-P0-Cf7" id="tEb-ux-aqg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Погода" id="wEv-Ob-fM3">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="ellipsis" catalog="system" id="rft-uB-Xkw"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Погода" id="wEv-Ob-fM3"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hf9-DQ-oeU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -132,7 +130,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ellipsis" catalog="system" width="128" height="37"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
