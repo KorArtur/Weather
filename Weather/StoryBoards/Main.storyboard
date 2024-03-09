@@ -29,15 +29,6 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33V-1l-WgB">
-                                            <rect key="frame" x="317" y="16" width="40" height="36"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="EIJ-EJ-YWD"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uMq-4b-exB">
                                             <rect key="frame" x="36" y="82.666666666666671" width="321" height="20.333333333333329"/>
                                             <subviews>
@@ -79,22 +70,38 @@
                                                 </label>
                                             </subviews>
                                         </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33V-1l-WgB">
+                                            <rect key="frame" x="325.33333333333331" y="15.999999999999996" width="31.666666666666686" height="61.666666666666657"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.max" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="28v-lo-Z1E">
+                                            <rect key="frame" x="246.66666666666663" y="24.666666666666671" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="IsZ-69-HUH"/>
+                                                <constraint firstAttribute="width" secondItem="28v-lo-Z1E" secondAttribute="height" multiplier="1:1" id="jm7-5a-0g0"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="33V-1l-WgB" secondAttribute="trailing" constant="16" id="7AO-Fq-aJU"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="33V-1l-WgB" secondAttribute="trailing" constant="16" id="5Zd-mT-qG4"/>
                                         <constraint firstItem="uMq-4b-exB" firstAttribute="leading" secondItem="o6k-cG-C1R" secondAttribute="leadingMargin" constant="16" id="LAo-ma-Obp"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="uMq-4b-exB" secondAttribute="trailing" constant="16" id="SCE-SU-y0p"/>
+                                        <constraint firstItem="uMq-4b-exB" firstAttribute="top" secondItem="33V-1l-WgB" secondAttribute="bottom" constant="5" id="VB3-as-mFi"/>
                                         <constraint firstItem="6s2-Rq-CMu" firstAttribute="leading" secondItem="o6k-cG-C1R" secondAttribute="leadingMargin" constant="16" id="Vpl-xY-nVH"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="uMq-4b-exB" secondAttribute="bottom" constant="5" id="ZS2-jn-rgV"/>
-                                        <constraint firstItem="33V-1l-WgB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6s2-Rq-CMu" secondAttribute="trailing" constant="8" symbolic="YES" id="iPK-sk-7nr"/>
+                                        <constraint firstItem="28v-lo-Z1E" firstAttribute="centerY" secondItem="o6k-cG-C1R" secondAttribute="centerY" constant="-15" id="bxw-ki-QXN"/>
+                                        <constraint firstItem="33V-1l-WgB" firstAttribute="top" secondItem="o6k-cG-C1R" secondAttribute="topMargin" constant="5" id="iKc-Gf-W22"/>
                                         <constraint firstItem="6s2-Rq-CMu" firstAttribute="top" secondItem="o6k-cG-C1R" secondAttribute="topMargin" constant="5" id="mh4-lV-10s"/>
-                                        <constraint firstItem="33V-1l-WgB" firstAttribute="top" secondItem="o6k-cG-C1R" secondAttribute="topMargin" constant="5" id="oVX-5P-pvN"/>
+                                        <constraint firstItem="28v-lo-Z1E" firstAttribute="centerX" secondItem="o6k-cG-C1R" secondAttribute="centerX" constant="70" id="xG9-1T-xVl"/>
                                         <constraint firstItem="uMq-4b-exB" firstAttribute="top" secondItem="6s2-Rq-CMu" secondAttribute="bottom" constant="33.670000000000002" id="xi7-qd-u37"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cityLabel" destination="6s2-Rq-CMu" id="7QD-Nl-ntV"/>
                                     <outlet property="conditionLabel" destination="zht-9p-WdB" id="pPe-lz-0vS"/>
+                                    <outlet property="imageMyView" destination="28v-lo-Z1E" id="EkE-q7-NP8"/>
                                     <outlet property="maxTempLabel" destination="g38-lh-cMF" id="cUN-rW-StQ"/>
                                     <outlet property="minTempLabel" destination="qLq-PK-SHC" id="tmI-ud-xPS"/>
                                     <outlet property="temperatureLabel" destination="33V-1l-WgB" id="ICa-zG-9hB"/>
@@ -133,6 +140,7 @@
     </scenes>
     <resources>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="sun.max" catalog="system" width="128" height="125"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

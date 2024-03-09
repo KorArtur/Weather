@@ -9,6 +9,7 @@ import UIKit
 
 final class WeatherCityCell: UITableViewCell {
     
+    @IBOutlet private var imageMyView: UIImageView!
     @IBOutlet private var cityLabel: UILabel!
     @IBOutlet private var conditionLabel: UILabel!
     @IBOutlet private var temperatureLabel: UILabel!
@@ -37,21 +38,25 @@ final class WeatherCityCell: UITableViewCell {
         
         switch weather.type {
         case .sunny:
+            imageMyView.image = UIImage(systemName: "cloud.fill")
             gradientLayer.colors = [
                 UIColor.systemYellow.cgColor,
                 UIColor.systemOrange.cgColor
             ]
         case .cloudy:
+            imageMyView.image = UIImage(systemName: "cloud.fill")
             gradientLayer.colors = [
                 UIColor.systemGray.cgColor,
                 UIColor.darkGray.cgColor
             ]
         case .rainy:
+            imageMyView.image = UIImage(systemName: "cloud.fill")
             gradientLayer.colors = [
                 UIColor.systemBlue.cgColor,
                 UIColor.systemCyan.cgColor
             ]
         case .windy:
+            imageMyView.image = UIImage(systemName: "cloud.fill")
             gradientLayer.colors = [
                 UIColor.white.cgColor,
                 UIColor.gray.cgColor

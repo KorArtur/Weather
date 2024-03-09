@@ -52,6 +52,7 @@ final class WeatherCitiesViewController: UITableViewController {
             ).instantiateViewController(
                 withIdentifier: "CurrentWeatherViewController"
             ) as? CurrentWeatherViewController
+        
         currentWeatherVC?.city = city
         guard let currentWeatherVC else { return }
         navigationController?.pushViewController(currentWeatherVC, animated: true)

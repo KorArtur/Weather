@@ -27,35 +27,35 @@ final class CurrentWeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        currentRevengeLabel.text = "Текущее место"
-        cityLabel.text = cities[0].title
-        temperatureLabel.text = """
-        \(cities[0].weathers[0].weatherByHours[0].weather.temperature)  
-        \(cities[0].weathers[0].weatherByHours[0].weather.type)
-        """
-        
-        weekLabel.text = "Погода на семь дней"
-        
-        
-        let labels = [mondayLabel, tuesdayLabel, wednesdayLabel, thursdayLabel,  fridaуLabel, saturdayLabel, sundayLabel]
-
-        for cityIndex in 0..<cities.count {
-            let weatherData = cities[cityIndex].weathers
-            
-            var cityWeatherTexts = ""
-            for weather in weatherData {
-                let day = weather.day
-                for hourWeather in weather.weatherByHours {
-                    let type = hourWeather.weather.type
-                    let temperature = hourWeather.weather.temperature
-                    let highLowTemperature = hourWeather.weather.highLowTemperature
-                    
-                    cityWeatherTexts += "\(day): \(type) \(temperature).... \(highLowTemperature)"
-                }
-            }
-            
-            labels[cityIndex]?.text = cityWeatherTexts
-        }
+//        currentRevengeLabel.text = "Текущее место"
+//        cityLabel.text = cities[0].title
+//        temperatureLabel.text = """
+//        \(cities[0].weathers[0].weatherByHours[0].weather.temperature)  
+//        \(cities[0].weathers[0].weatherByHours[0].weather.type)
+//        """
+//        
+//        weekLabel.text = "Погода на семь дней"
+//        
+//        
+//        let labels = [mondayLabel, tuesdayLabel, wednesdayLabel, thursdayLabel,  fridaуLabel, saturdayLabel, sundayLabel]
+//
+//        for cityIndex in 0..<cities.count {
+//            let weatherData = cities[cityIndex].weathers
+//            
+//            var cityWeatherTexts = ""
+//            for weather in weatherData {
+//                let day = weather.day
+//                for hourWeather in weather.weatherByHours {
+//                    let type = hourWeather.weather.type
+//                    let temperature = hourWeather.weather.temperature
+//                    let highLowTemperature = hourWeather.weather.highLowTemperature
+//                    
+//                    cityWeatherTexts += "\(day): \(type) \(temperature).... \(highLowTemperature)"
+//                }
+//            }
+//            
+//            labels[cityIndex]?.text = cityWeatherTexts
+//        }
         
 //        mondayLabel.text = """
 //        \(cities[1].weathers[1].day)
