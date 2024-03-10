@@ -9,6 +9,7 @@ import UIKit
 
 final class WeatherCityCell: UITableViewCell {
     
+    @IBOutlet private var weatherImageView: UIImageView!
     @IBOutlet private var cityLabel: UILabel!
     @IBOutlet private var conditionLabel: UILabel!
     @IBOutlet private var temperatureLabel: UILabel!
@@ -18,6 +19,7 @@ final class WeatherCityCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         contentView.layer.cornerRadius = 15
+        backgroundColor = .clear
         
         let margins = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
         contentView.frame = contentView.frame.inset(by: margins)
@@ -37,21 +39,25 @@ final class WeatherCityCell: UITableViewCell {
         
         switch weather.type {
         case .sunny:
+            weatherImageView.image = UIImage(systemName: "sun.max.fill")
             gradientLayer.colors = [
                 UIColor.systemYellow.cgColor,
                 UIColor.systemOrange.cgColor
             ]
         case .cloudy:
+            weatherImageView.image = UIImage(systemName: "cloud.fill")
             gradientLayer.colors = [
                 UIColor.systemGray.cgColor,
                 UIColor.darkGray.cgColor
             ]
         case .rainy:
+            weatherImageView.image = UIImage(systemName: "cloud.rain")
             gradientLayer.colors = [
                 UIColor.systemBlue.cgColor,
                 UIColor.systemCyan.cgColor
             ]
         case .windy:
+            weatherImageView.image = UIImage(systemName: "wind")
             gradientLayer.colors = [
                 UIColor.white.cgColor,
                 UIColor.gray.cgColor
