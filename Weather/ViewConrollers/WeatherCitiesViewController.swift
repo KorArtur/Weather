@@ -14,6 +14,7 @@ final class WeatherCitiesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = .none
+        tableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "5b8f2ca8426c450474624ad87690de2c.jpg"))
     }
     
     override func tableView(
@@ -43,7 +44,10 @@ final class WeatherCitiesViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(
+        _ tableView: UITableView,
+        didSelectRowAt indexPath: IndexPath
+    ) {
         let city = cities[indexPath.row]
         
             let currentWeatherVC = UIStoryboard(
